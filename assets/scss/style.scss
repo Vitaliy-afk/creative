@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+@import "./vendors/include-media";
+@import "./base/variables";
+@import "./vendors/normalize";
+@import "./base/mixins";
+
+@import "./base/breakpoints";
+
+
+@import "./vendors/slick";
+@import "./vendors/slider";
+
+@import "./base/forms";
+@import "./base/functions";
+@import "./base/helpers";
+
+
+@import "./layouts/common";
+@import "./layouts/header";
+@import "./layouts/burger";
+@import "./layouts/footer";
+
+
+@import "./components/intro/intro";
+@import "./components/stat/stat";
+@import "./components/service/service";
+@import "./components/creative/creative";
+@import "./components/master/master";
+@import "./components/digital/digital";
+@import "./components/form/form";
+
+
+
+

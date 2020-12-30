@@ -1,0 +1,117 @@
+.creative {
+    padding: 80px 0 100px;
+    @include media ('<1024px'){
+        padding: 50px 0 50px;
+    }
+    .container {
+        max-width: 1210px;
+    }
+}
+
+
+
+.creative-columns {
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    @include media ('>=1024px'){
+        display: flex;
+    }
+    > div {
+        @include media ('<=1024px'){
+            max-width: 100%;
+        }
+        padding: 0 15px;
+        &:nth-child(1){
+            max-width: 44.5%;
+            flex: 0 0 44.5%;
+            padding-top: 143px;
+            @include media ('<=1024px'){
+                max-width: 100%;
+                padding-top: 0;
+            }
+        }
+        &:nth-child(2){
+            max-width: 55.5%;
+            flex: 0 0 55.5%;
+            @include media ('<=1024px'){
+                max-width: 100%;
+            }
+            img {
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+
+
+.card {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.title-col {
+    line-height: 1.7;
+    @include media ('<=1024px'){
+        margin-bottom: 30px;
+    }
+    h1 {
+        font-size: 60px;
+        max-width: 387px;
+        margin: 0;
+        margin-bottom: 50px;
+        line-height: 1.2;
+        letter-spacing: -0.08rem;
+        @include media ('<=1024px'){
+            max-width: 100%;
+            font-size: 48px;
+        }
+        @include media ('<=860px'){
+            max-width: 100%;
+            font-size: 40px;
+        }
+        mark {
+            background: none;
+            color: #f95157;
+        }
+    }
+    > p {
+        &:nth-child(2){
+            margin-bottom: 30px;
+            display: block;
+        }
+    }
+    > div {
+        margin-top: 30px;
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+.top {
+    > figure {
+        &:nth-child(2){
+           margin-left: 77px;
+        }
+    }
+}
+
+
+
+.bottom {
+    margin-top: 153px;
+}
+
+.image-card {
+    padding: 3px;
+}
+
+
+.image-card img {
+    max-width: 100%;
+}

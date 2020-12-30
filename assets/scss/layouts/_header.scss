@@ -1,0 +1,99 @@
+.header {
+    padding: 57px 0 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+	z-index: 1000;
+    transition-duration: 1.27s;
+	transition-timing-function: ease-in-out;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		@include media ('>767px'){
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&-logo {
+			flex-shrink: 0;
+			display: flex;
+			a {
+				display: block;
+				@include media {
+					img {
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.header-nav {
+	transition-duration: 1.27s;
+	transition-timing-function: ease-in-out;
+	@include media ('<767px'){
+		transform: translateY(-150%);
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	.burger-active & {
+		@include media ('<767px'){
+			background-color: grey;
+			opacity: .9;
+			transform: translateY(0px);
+			visibility: visible;
+		}
+	}
+}
+
+
+
+.header-nav {
+	@include media ('<767px'){
+		text-align: center;
+	}
+}
+
+.header-navlist {
+	@extend %listreset;
+	@include media ('<767px'){
+		text-align: center;
+		padding: 20px;
+	}
+	@include media ('>767px'){
+		display: flex;
+	}
+	.header-navlist__item {
+		font-size: 16px;
+		transition: .3s;
+		@include media ('<767px'){
+			font-size: 14px;
+			margin-left: 0;
+		}
+	}
+	&__item:not(:last-child) {
+		@include media ('<767px'){
+			margin-bottom: 20px;
+		}
+	}
+	&__item:not(:first-child) {
+		@include media ('>767px'){
+			margin-left: 53px;
+		}
+	}
+	.header-navlink {
+		text-decoration: none;
+		color: $white;
+	}
+}
+
+
+.header-navlist__item:hover {
+	text-decoration: underline;
+}

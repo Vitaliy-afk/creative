@@ -1,0 +1,98 @@
+.master {
+    padding: 113px 0 150px;
+    position: relative;
+    @include media ('<1024px'){
+        padding: 50px 0 50px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        background: #f95157;
+        min-height: 590px;
+        width: 1866px;
+        z-index: -1;
+        border-radius: 78px;
+        max-width: 100%;
+        right: 28px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+}
+
+
+.master-columns {
+    display: flex;
+    margin: 0 -15px;
+    padding-top: 73px;
+    padding-bottom: 73px;
+    @include media ('<1024px'){
+        padding: 0;
+    }
+    > div {
+        &:nth-child(1){
+            max-width: 48.5%;
+            flex: 0 0 48.5%;
+            display: flex;
+            padding: 0 15px;
+        }
+        &:nth-child(2){
+            max-width: 51.5%;
+            flex: 0 0 51.5%;
+            color: $white;
+            padding: 90px 15px;
+            @include media ('<=1024px'){
+                padding-top: 50;
+            }
+            .block-text {
+                line-height: 1.7;
+                text-align: left;
+                font-size: 16px;
+                max-width: 500px;
+                letter-spacing: 0.01rem;
+            }
+            h1 {
+                font-size: 60px;
+                line-height: 1.2;
+                margin: 0;
+                margin-bottom: 37px;
+                letter-spacing: -0.02rem;
+                @include media ('<=1024px'){
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
+
+.col {
+    .block-left {
+        > div {
+            margin: 1px;
+            &:nth-child(1){
+                width: 220px;
+                height: 220px;
+                border-radius: 120px;
+                background: #42c3af;
+            }
+            &:nth-child(2){
+                width: 220px;
+                height: 220px;
+                background: #f2b115;
+            }
+        }
+    }
+    .block-right {
+        > div {
+            margin: 1px;
+            &:nth-child(1){
+                border-bottom: 220px solid #1f3eae; 
+                border-top-right-radius: 200px;
+            }
+            &:nth-child(2){
+                width: 220px;
+                height: 220px;
+                border-radius: 120px;
+                background: #8440f4;
+            }
+        }
+    }
+}
